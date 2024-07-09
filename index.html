@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> </title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #FFFFFF;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        button {
+            background-color: #1E88E5;
+            color: #FFFFFF;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #1565C0;
+        }
+    </style>
+</head>
+<body>
+    <h1>   </h1>
+    <p> </p>
+    <button onclick="requestPopUpPermission()"> </button>
+
+    <script>
+        function requestPopUpPermission() {
+            let popUp = window.open("", "popUpTest", "width=1,height=1");
+            if (popUp === null || typeof popUp === "undefined") {
+                alert("ERROR");
+            } else {
+                popUp.close();
+                alert("Thank you!");
+            }
+        }
+    </script>
+</body>
+</html>
